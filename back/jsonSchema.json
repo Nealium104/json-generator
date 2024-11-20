@@ -1,0 +1,83 @@
+{
+	"hdr_simple": "",
+	"include": "",
+	"hdr_srch_include": "",
+	"hdr_width": "",
+	"hdr_alert_include": "",
+	"hdr_alert_title": "",
+	"hdr_alert_msg": "",
+	"hdr_alert_url_label": "",
+	"hdr_alert_url": "",
+	"home_label": "",
+	"home_url": "",
+	"custom_logo": "",
+	"image_path": "",
+	"image_path_fallback": "",
+	"bases": [
+		{
+			"label": ""
+		},
+		{
+			"title": "",
+			"label": "",
+			"children": [
+				{
+					"title": "",
+					"label": "",
+					"url": ""
+				},
+				{
+					"title": "",
+					"label": "",
+					"url": ""
+				},
+				{
+					"title": "",
+					"label": "",
+					"url": ""
+				}
+			]
+		},
+		{
+			"title": "",
+			"label": "",
+			"children": [
+				{
+					"title": "",
+					"label": "",
+					"url": ""
+				},
+				{
+					"title": "",
+					"label": "",
+					"url": ""
+				},
+				{
+					"title": "",
+					"label": "",
+					"url": ""
+				}
+			]
+		},
+		{
+			"title": "",
+			"label": "",
+			"url": ""
+		},
+		{
+			"title": "",
+			"label": "",
+			"url": ""
+		},
+		{
+			"title": "",
+			"label": "",
+			"url": ""
+		},
+		{
+			"title": "",
+			"label": "",
+			"url": ""
+		}
+	]
+}

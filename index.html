@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./styles.css">
+    <script defer src="./main.js"></script>
+</head>
+<body>
+    <div class="form-container">
+        <h1>JSON Creator</h1>
+        <form id="configForm">
+            <!-- Header Section -->
+            <div class="form-group">
+                <label for="hdr_simple">Header Simple</label>
+                <input type="text" id="hdr_simple" name="hdr_simple" class="form-control">
+            </div>
+
+            <div class="form-group">
+                <label for="include">Include</label>
+                <input type="text" id="include" name="include" class="form-control">
+            </div>
+
+            <div class="form-group">
+                <label for="hdr_srch_include">Header Search Include</label>
+                <input type="text" id="hdr_srch_include" name="hdr_srch_include" class="form-control">
+            </div>
+
+            <div class="form-group">
+                <label for="hdr_width">Header Width</label>
+                <input type="text" id="hdr_width" name="hdr_width" class="form-control">
+            </div>
+
+            <!-- Alert Section -->
+            <div class="form-group">
+                <label for="hdr_alert_include">Header Alert Include</label>
+                <input type="text" id="hdr_alert_include" name="hdr_alert_include" class="form-control">
+            </div>
+
+            <div class="form-group">
+                <label for="hdr_alert_title">Header Alert Title</label>
+                <input type="text" id="hdr_alert_title" name="hdr_alert_title" class="form-control">
+            </div>
+
+            <div class="form-group">
+                <label for="hdr_alert_msg">Header Alert Message</label>
+                <input type="text" id="hdr_alert_msg" name="hdr_alert_msg" class="form-control">
+            </div>
+
+            <div class="form-group">
+                <label for="hdr_alert_url_label">Header Alert URL Label</label>
+                <input type="text" id="hdr_alert_url_label" name="hdr_alert_url_label" class="form-control">
+            </div>
+
+            <div class="form-group">
+                <label for="hdr_alert_url">Header Alert URL</label>
+                <input type="url" id="hdr_alert_url" name="hdr_alert_url" class="form-control">
+            </div>
+
+            <!-- Home Section -->
+            <div class="form-group">
+                <label for="home_label">Home Label</label>
+                <input type="text" id="home_label" name="home_label" class="form-control">
+            </div>
+
+            <div class="form-group">
+                <label for="home_url">Home URL</label>
+                <input type="url" id="home_url" name="home_url" class="form-control">
+            </div>
+
+            <!-- Image Section -->
+            <div class="form-group">
+                <label for="custom_logo">Custom Logo</label>
+                <input type="text" id="custom_logo" name="custom_logo" class="form-control">
+            </div>
+
+            <div class="form-group">
+                <label for="image_path">Image Path</label>
+                <input type="text" id="image_path" name="image_path" class="form-control">
+            </div>
+
+            <div class="form-group">
+                <label for="image_path_fallback">Image Path Fallback</label>
+                <input type="text" id="image_path_fallback" name="image_path_fallback" class="form-control">
+            </div>
+
+            <!-- Bases Section -->
+            <div class="bases-section">
+                <h3>Bases</h3>
+                
+                <!-- Base 1 -->
+                <div class="base-item">
+                    <div class="form-group">
+                        <label for="base1_label">Base 1 Label</label>
+                        <input type="text" id="base1_label" name="bases[0].label" class="form-control">
+                    </div>
+                </div>
+
+                <!-- Base 2 with children -->
+                <div class="base-item">
+                    <div class="form-group">
+                        <label for="base2_title">Base 2 Title</label>
+                        <input type="text" id="base2_title" name="bases[1].title" class="form-control">
+                    </div>
+                    <div class="form-group">
+                        <label for="base2_label">Base 2 Label</label>
+                        <input type="text" id="base2_label" name="bases[1].label" class="form-control">
+                    </div>
+                    
+                    <div class="children-section">
+                        <h4>Children</h4>
+                        <div class="child-item">
+                            <div class="form-group">
+                                <label>Child 1</label>
+                                <input type="text" name="bases[1].children[0].title" placeholder="Title" class="form-control">
+                                <input type="text" name="bases[1].children[0].label" placeholder="Label" class="form-control">
+                                <input type="url" name="bases[1].children[0].url" placeholder="URL" class="form-control">
+                            </div>
+                        </div>
+                        <div class="child-item">
+                            <div class="form-group">
+                                <label>Child 2</label>
+                                <input type="text" name="bases[1].children[1].title" placeholder="Title" class="form-control">
+                                <input type="text" name="bases[1].children[1].label" placeholder="Label" class="form-control">
+                                <input type="url" name="bases[1].children[1].url" placeholder="URL" class="form-control">
+                            </div>
+                        </div>
+                        <div class="child-item">
+                            <div class="form-group">
+                                <label>Child 3</label>
+                                <input type="text" name="bases[1].children[2].title" placeholder="Title" class="form-control">
+                                <input type="text" name="bases[1].children[2].label" placeholder="Label" class="form-control">
+                                <input type="url" name="bases[1].children[2].url" placeholder="URL" class="form-control">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Base 3 with children -->
+                <div class="base-item">
+                    <div class="form-group">
+                        <label for="base3_title">Base 3 Title</label>
+                        <input type="text" id="base3_title" name="bases[2].title" class="form-control">
+                    </div>
+                    <div class="form-group">
+                        <label for="base3_label">Base 3 Label</label>
+                        <input type="text" id="base3_label" name="bases[2].label" class="form-control">
+                    </div>
+                    
+                    <div class="children-section">
+                        <h4>Children</h4>
+                        <div class="child-item">
+                            <div class="form-group">
+                                <label>Child 1</label>
+                                <input type="text" name="bases[2].children[0].title" placeholder="Title" class="form-control">
+                                <input type="text" name="bases[2].children[0].label" placeholder="Label" class="form-control">
+                                <input type="url" name="bases[2].children[0].url" placeholder="URL" class="form-control">
+                            </div>
+                        </div>
+                        <div class="child-item">
+                            <div class="form-group">
+                                <label>Child 2</label>
+                                <input type="text" name="bases[2].children[1].title" placeholder="Title" class="form-control">
+                                <input type="text" name="bases[2].children[1].label" placeholder="Label" class="form-control">
+                                <input type="url" name="bases[2].children[1].url" placeholder="URL" class="form-control">
+                            </div>
+                        </div>
+                        <div class="child-item">
+                            <div class="form-group">
+                                <label>Child 3</label>
+                                <input type="text" name="bases[2].children[2].title" placeholder="Title" class="form-control">
+                                <input type="text" name="bases[2].children[2].label" placeholder="Label" class="form-control">
+                                <input type="url" name="bases[2].children[2].url" placeholder="URL" class="form-control">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Bases 4-7 -->
+                <div class="base-item">
+                    <div class="form-group">
+                        <label for="base4_title">Base 4 Title</label>
+                        <input type="text" id="base4_title" name="bases[3].title" class="form-control">
+                    </div>
+                    <div class="form-group">
+                        <label for="base4_label">Base 4 Label</label>
+                        <input type="text" id="base4_label" name="bases[3].label" class="form-control">
+                    </div>
+                    <div class="form-group">
+                        <label for="base4_url">Base 4 URL</label>
+                        <input type="url" id="base4_url" name="bases[3].url" class="form-control">
+                    </div>
+                </div>
+
+                <div class="base-item">
+                    <div class="form-group">
+                        <label for="base5_title">Base 5 Title</label>
+                        <input type="text" id="base5_title" name="bases[4].title" class="form-control">
+                    </div>
+                    <div class="form-group">
+                        <label for="base5_label">Base 5 Label</label>
+                        <input type="text" id="base5_label" name="bases[4].label" class="form-control">
+                    </div>
+                    <div class="form-group">
+                        <label for="base5_url">Base 5 URL</label>
+                        <input type="url" id="base5_url" name="bases[4].url" class="form-control">
+                    </div>
+                </div>
+
+                <div class="base-item">
+                    <div class="form-group">
+                        <label for="base6_title">Base 6 Title</label>
+                        <input type="text" id="base6_title" name="bases[5].title" class="form-control">
+                    </div>
+                    <div class="form-group">
+                        <label for="base6_label">Base 6 Label</label>
+                        <input type="text" id="base6_label" name="bases[5].label" class="form-control">
+                    </div>
+                    <div class="form-group">
+                        <label for="base6_url">Base 6 URL</label>
+                        <input type="url" id="base6_url" name="bases[5].url" class="form-control">
+                    </div>
+                </div>
+
+                <div class="base-item">
+                    <div class="form-group">
+                        <label for="base7_title">Base 7 Title</label>
+                        <input type="text" id="base7_title" name="bases[6].title" class="form-control">
+                    </div>
+                    <div class="form-group">
+                        <label for="base7_label">Base 7 Label</label>
+                        <input type="text" id="base7_label" name="bases[6].label" class="form-control">
+                    </div>
+                    <div class="form-group">
+                        <label for="base7_url">Base 7 URL</label>
+                        <input type="url" id="base7_url" name="bases[6].url" class="form-control">
+                    </div>
+                </div>
+            </div>
+
+            <button type="submit" style="margin-top: 20px; padding: 10px 20px; background-color: #007bff; color: white; border: none; border-radius: 4px; cursor: pointer;">Submit</button>
+        </form>
+    </div>
+</body>
+</html>
